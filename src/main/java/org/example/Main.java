@@ -1,30 +1,25 @@
 package org.example;
 
-import java.util.Scanner; // Scanner 클래스를 가져오기
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
-        Scanner scanner = new Scanner(System.in);
-         int[] arr = new int[5];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("배열의 값을 입력하세요:");
+        //오직 br.readLine()만 사용
 
-        //배열 값 입력 받기
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print("arr[" + i + "] = ");
-            arr[i] = scanner.nextInt();
-        }
+        String str = br.readLine();
 
-        // 배열의 합계 계산
-        int sum = 0;
-        for (int value : arr) {
-            sum += value;
-        }
+        //소수 처리
+        double value1 = Double.parseDouble(str); //문자열을 Double로 처리
 
-        System.out.println("최종 금액: " + sum);
+        //정수 처리
+        int value2 = Integer.parseInt(str);
 
-        scanner.close();
+
 
         }
     }
